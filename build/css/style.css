@@ -1,0 +1,117 @@
+/*
+  TABLE OF CONTENT:
+  1.0) Google fonts imports
+  2.0) all default styling
+  3.0) Carousel container
+  4.0) customer review div
+    4.1) customer image
+
+*/
+ /* 1.0) Google fonts imports */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 2.0) all default styling */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p {
+  text-transform: capitalize;
+  color: #333;
+}
+a {
+  text-decoration: none;
+}
+/* 3.0) Carousel container */
+.carousel-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 500px;
+  border: 2px solid #eeee;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.carousel-container > h2 {
+  display: block;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.carousel-container > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 3px;
+  width: 30px;
+  background-color: #333;
+}
+/* 4.0) customer review div */
+.carousel-container h4, p  {
+  text-align: center;
+}
+.carousel-container p {
+  font-size: .8rem;
+}
+/* 4.1) user image */
+.user-img {
+  display: block;
+  position: relative;
+  margin: 1rem auto;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  border-radius: 50%;
+}
+.user-img > img  {
+  width: 100%;
+  border-radius: inherit;
+}
+.user-img::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  z-index: -1;
+  opacity: 0.8;
+  height: 100px;
+  width: 100px;
+  background-color: #ff4545;
+  border-radius: 50%;
+}
+.user-img > i {
+  position: absolute;
+  top: .5rem;
+  left: -8px;
+  background-color: #ff4545;
+  padding: .5rem;
+  border-radius: 50%;
+  color: #fff;
+}
+/* 4.2) user name and job title */
+#customerInfo {
+  margin: 1rem auto;
+  font-size: .9rem;
+  width: 50%;
+}
+
+/* 4.3) Panigations  */
+
+.panigations-btn {
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+.panigations-btn > button {
+  padding: 5px;
+  margin: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: transparent;
+  background: transparent;
+  color: #ff4545;
+}
